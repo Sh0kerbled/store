@@ -49,3 +49,6 @@ def products(req):
         ]
     }
     return render(req, "products/products.html", context)
+
+def not_found(req, exception):
+    return render(req, "products/404.html", status=404)

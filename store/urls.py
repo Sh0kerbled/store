@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from products.views import index, products
+from django.conf.urls import handler404
+
+handler404 = 'products.views.not_found'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
